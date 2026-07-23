@@ -174,27 +174,36 @@ display:flex;align-items:center;justify-content:center;color:#6b7280;background:
   <p class="small" style="max-width:640px">Se você tem um plano via CNPJ, sofre reajustes acima da inflação e ainda está pagando, vale pelo menos uma conversa.</p>
 </div></section>
 
-<section id="form" class="bg-black" style="padding:0">
-  <iframe
-    src="https://links.fullfunnel.app/widget/form/kbUdDL0Hr7orlIKsQxvv"
-    style="display:none;width:100%;height:100%;border:none;border-radius:8px"
-    id="popup-kbUdDL0Hr7orlIKsQxvv"
-    data-layout="{'id':'POPUP'}"
-    data-trigger-type="click"
-    data-trigger-value=".popup-trigger"
-    data-activation-type="alwaysActivated"
-    data-activation-value=""
-    data-deactivation-type="neverDeactivate"
-    data-deactivation-value=""
-    data-form-name="Form 0"
-    data-height="532"
-    data-layout-iframe-id="popup-kbUdDL0Hr7orlIKsQxvv"
-    data-form-id="kbUdDL0Hr7orlIKsQxvv"
-    title="Form 0"
-    data-modal-height="500"
-  ></iframe>
-  <script src="https://links.fullfunnel.app/js/form_embed.js"></script>
-</section>
+<div id="lead-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.75);align-items:center;justify-content:center;padding:20px">
+  <div style="position:relative;width:100%;max-width:500px;background:#0A101B;border:1px solid #2A2A2A;border-radius:16px;overflow:hidden">
+    <button type="button" id="lead-modal-close" aria-label="Fechar" style="position:absolute;top:8px;right:10px;background:none;border:none;color:#fff;font-size:26px;line-height:1;cursor:pointer;z-index:1">&times;</button>
+    <iframe
+      src="https://links.fullfunnel.app/widget/form/kbUdDL0Hr7orlIKsQxvv"
+      style="width:100%;height:532px;border:none;display:block"
+      id="popup-kbUdDL0Hr7orlIKsQxvv"
+      data-layout="{'id':'INLINE'}"
+      data-form-name="Form 0"
+      data-height="532"
+      data-layout-iframe-id="popup-kbUdDL0Hr7orlIKsQxvv"
+      data-form-id="kbUdDL0Hr7orlIKsQxvv"
+      title="Form 0"
+    ></iframe>
+  </div>
+</div>
+<script src="https://links.fullfunnel.app/js/form_embed.js"></script>
+<script>
+(function(){
+  var modal = document.getElementById('lead-modal');
+  function openModal(e){ if(e) e.preventDefault(); modal.style.display = 'flex'; }
+  function closeModal(){ modal.style.display = 'none'; }
+  document.querySelectorAll('.popup-trigger').forEach(function(btn){
+    btn.addEventListener('click', openModal);
+  });
+  document.getElementById('lead-modal-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
+})();
+</script>
 
 <section class="bg-black" style="padding:36px 20px"><div class="wrap" style="gap:8px">
   <span style="color:#9AA0AB;font-size:14px">Wagner Antônio · Advocacia especializada em Direito do Consumidor na Saúde</span>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1045407667990574');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1045407667990574&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Análise Confirmada · Wagner António · Falso Coletivo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--gA:#FFB700;--gB:#FF7B00;--dark:#0A101B;--ico:#FFD200}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Sora',sans-serif;background:var(--dark);color:#fff;line-height:1.6}
+    .grad{background:linear-gradient(234deg,var(--gA),var(--gB));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+    section{padding:60px 20px;display:flex;flex-direction:column;align-items:center;text-align:center}
+    .wrap{max-width:860px;width:100%;display:flex;flex-direction:column;align-items:center;gap:24px}
+    .bg-grad{background:linear-gradient(180deg,#11161F,#0A101B)}.bg-black{background:#000}.bg-dark{background:var(--dark)}
+    h1{font-size:clamp(26px,4.5vw,38px);line-height:1.2;font-weight:800}
+    h2{font-size:clamp(22px,3.5vw,30px);line-height:1.25;font-weight:700}
+    h3{font-size:18px;font-weight:700}
+    p{color:#D6D9DF;font-size:16px;max-width:700px}
+    .muted{color:#8C93A1;font-size:13px}
+    .eyebrow{color:var(--gA);font-size:13px;letter-spacing:.12em;font-weight:600;text-transform:uppercase}
+
+    /* Badge de confirmação */
+    .confirm-badge{
+      background:linear-gradient(160deg,#0A2010,#050D07);
+      border:1px solid #1A4A25;
+      border-radius:100px;
+      padding:10px 26px;
+      font-size:15px;
+      color:#6EE896;
+      font-weight:600;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    .confirm-badge .dot{
+      width:9px;height:9px;border-radius:50%;
+      background:#3DD68C;
+      box-shadow:0 0 8px #3DD68C;
+      animation:pulse 1.8s infinite;
+    }
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+    /* Botão principal */
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      background:linear-gradient(234deg,var(--gA),var(--gB));
+      color:#fff;font-weight:700;text-transform:uppercase;
+      padding:20px 44px;border-radius:100px;text-decoration:none;font-size:16px;
+      box-shadow:0 0 20px -5px var(--gA);animation:pisca 1.5s infinite;
+      border:none;cursor:pointer;
+    }
+    @keyframes pisca{70%{box-shadow:0 0 0 28px transparent}100%{box-shadow:0 0 0 0 transparent}}
+
+    /* Botão WhatsApp */
+    .btn-wa{
+      background:linear-gradient(234deg,#25D366,#128C4A);
+      box-shadow:0 0 20px -5px #25D366;
+      animation:piscaWa 1.5s infinite;
+    }
+    @keyframes piscaWa{70%{box-shadow:0 0 0 28px transparent}100%{box-shadow:0 0 0 0 transparent}}
+
+    /* Vídeo placeholder */
+    .video-wrap{
+      width:100%;max-width:760px;
+      aspect-ratio:16/9;
+      border:1px solid var(--gA);
+      border-radius:16px;
+      background:#070707;
+      display:flex;flex-direction:column;
+      align-items:center;justify-content:center;
+      gap:14px;
+      color:#6b7280;
+      position:relative;
+      overflow:hidden;
+    }
+    .video-wrap iframe{
+      position:absolute;inset:0;width:100%;height:100%;border:none;border-radius:16px;
+    }
+    .play-icon{
+      width:64px;height:64px;border-radius:50%;
+      background:linear-gradient(234deg,var(--gA),var(--gB));
+      display:flex;align-items:center;justify-content:center;
+      font-size:26px;
+    }
+
+    /* Cards */
+    .card{border:1px solid #2A2A2A;background:#0C0C0C;border-radius:15px;padding:28px;text-align:left}
+    .row{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;width:100%}
+    .row .card{flex:1 1 240px}
+
+    /* Steps */
+    .steps{display:flex;flex-direction:column;gap:0;width:100%;max-width:660px}
+    .step{display:flex;gap:20px;align-items:flex-start;padding:22px 0;position:relative}
+    .step:not(:last-child)::after{
+      content:"";position:absolute;left:19px;top:52px;bottom:0;
+      width:2px;background:linear-gradient(180deg,#FFB700 0%,#2A2A2A 100%);
+    }
+    .step-num{
+      flex:0 0 40px;height:40px;border-radius:50%;
+      background:linear-gradient(234deg,var(--gA),var(--gB));
+      font-weight:800;font-size:17px;color:#fff;
+      display:flex;align-items:center;justify-content:center;
+      position:relative;z-index:1;
+    }
+    .step-body{flex:1}
+    .step-body h3{font-size:17px;color:#fff;margin-bottom:4px}
+    .step-body p{font-size:14px;color:#9AA0AB;max-width:none;margin:0}
+
+    /* Depoimentos */
+    .testimonial{
+      border:1px solid #2A2A2A;
+      background:linear-gradient(160deg,#0E0D0A,#0C0C0C);
+      border-radius:15px;padding:24px;text-align:left;
+      flex:1 1 240px;
+    }
+    .stars{color:var(--gA);font-size:15px;margin-bottom:10px;letter-spacing:2px}
+    .testimonial blockquote{
+      font-size:15px;color:#D6D9DF;font-style:italic;line-height:1.6;margin-bottom:14px;
+    }
+    .t-author{display:flex;align-items:center;gap:12px}
+    .t-avatar{
+      width:40px;height:40px;border-radius:50%;
+      background:linear-gradient(234deg,var(--gA),var(--gB));
+      font-weight:700;font-size:15px;color:#fff;
+      display:flex;align-items:center;justify-content:center;flex:0 0 40px;
+    }
+    .t-name{font-weight:700;font-size:14px;color:#fff}
+    .t-role{font-size:12px;color:#8C93A1}
+
+    /* Aviso/Urgência */
+    .urgency{
+      background:linear-gradient(160deg,#1A0A00,#0C0500);
+      border:1px solid #3D1C00;
+      border-radius:15px;
+      padding:28px 32px;
+      text-align:center;
+      max-width:680px;
+    }
+    .urgency p{color:#FFD48A;font-size:15px;max-width:none}
+
+    /* Divisor */
+    hr{border:none;border-top:1px solid #1E2430;width:100%;max-width:860px}
+
+    /* Ícone WA */
+    .wa-icon{width:22px;height:22px;fill:#fff}
+
+    /* Flywheel */
+    .flywheel{display:flex;flex-wrap:wrap;gap:0;width:100%;max-width:900px;justify-content:center;align-items:center}
+    .fw-card{
+      flex:1 1 190px;max-width:210px;
+      border:1px solid #2A2A2A;background:linear-gradient(160deg,#12100A,#0C0C0C);
+      border-radius:15px;padding:24px 18px;text-align:center;
+      display:flex;flex-direction:column;align-items:center;gap:10px;
+    }
+    .fw-num{
+      width:38px;height:38px;border-radius:50%;
+      background:linear-gradient(234deg,var(--gA),var(--gB));
+      font-weight:800;font-size:16px;color:#fff;
+      display:flex;align-items:center;justify-content:center;
+    }
+    .fw-icon{font-size:26px}
+    .fw-card h3{font-size:15px;color:#fff}
+    .fw-card p{font-size:13px;color:#9AA0AB;max-width:none;margin:0}
+    .fw-arrow{
+      flex:0 0 auto;color:var(--gA);font-size:22px;font-weight:700;
+      padding:0 6px;
+    }
+    @media(max-width:760px){
+      .flywheel{flex-direction:column}
+      .fw-arrow{transform:rotate(90deg)}
+    }
+    .fw-loop{
+      margin-top:10px;color:#8C93A1;font-size:13px;display:flex;align-items:center;gap:8px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ① TOPO — Confirmação -->
+<section class="bg-grad" style="padding:56px 20px 48px">
+  <div class="wrap">
+    <div class="confirm-badge"><span class="dot"></span> Cadastro recebido com sucesso</div>
+
+    <h1>
+      Cadastro <span class="grad">confirmado!</span><br>
+      Sua análise gratuita já está sendo preparada.
+    </h1>
+
+    <p style="font-size:17px;color:#D6D9DF;text-align:center">
+      Em breve nossa equipe entra em contato para dar início ao Raio-X do seu contrato.
+      Enquanto isso, veja como funciona o nosso método e o que outros clientes já conquistaram.
+    </p>
+  </div>
+</section>
+
+
+<!-- ② PRÓXIMOS PASSOS -->
+<section class="bg-dark">
+  <div class="wrap">
+    <span class="eyebrow">O que acontece agora</span>
+    <h2>Veja os <span class="grad">próximos passos</span></h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Você fez o seu cadastro</h3>
+          <p>Seus dados já estão com a nossa equipe, prontos para dar início à análise. Já feito! ✓</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Nossa equipe entra em contato</h3>
+          <p>Em até 24h úteis você receberá uma ligação ou mensagem pelo WhatsApp para agendar a análise do seu contrato.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Raio-X do seu contrato</h3>
+          <p>Analisamos a mensalidade, os reajustes aplicados e o histórico do contrato para calcular o valor recuperável.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3>Você recebe o laudo de viabilidade</h3>
+          <p>Se houver base jurídica, apresentamos o valor exato que pode ser recuperado e como funciona o processo. Se não houver, avisamos — sem custo, sem pressão.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ②.5 MÉTODO — FLYWHEEL -->
+<section class="bg-black">
+  <div class="wrap">
+    <span class="eyebrow">Nossa metodologia</span>
+    <h2>O método que já <span class="grad">recuperou milhões</span> em mensalidades abusivas</h2>
+    <p style="text-align:center">
+      Não é sorte, é processo. Todo caso passa pelas mesmas quatro etapas antes de virar dinheiro de volta no seu bolso.
+    </p>
+
+    <div class="flywheel">
+      <div class="fw-card">
+        <div class="fw-num">1</div>
+        <div class="fw-icon">🔍</div>
+        <h3>Diagnóstico do contrato</h3>
+        <p>Analisamos seu plano e identificamos sinais de falso coletivo e reajustes fora do teto legal.</p>
+      </div>
+      <div class="fw-arrow">→</div>
+      <div class="fw-card">
+        <div class="fw-num">2</div>
+        <div class="fw-icon">📑</div>
+        <h3>Comprovação jurídica</h3>
+        <p>Reunimos provas técnicas e documentais que sustentam a irregularidade perante a operadora.</p>
+      </div>
+      <div class="fw-arrow">→</div>
+      <div class="fw-card">
+        <div class="fw-num">3</div>
+        <div class="fw-icon">⚖️</div>
+        <h3>Ação de revisão</h3>
+        <p>Entramos com a medida judicial para reverter o reajuste, sem que você precise cancelar o plano.</p>
+      </div>
+      <div class="fw-arrow">→</div>
+      <div class="fw-card">
+        <div class="fw-num">4</div>
+        <div class="fw-icon">💰</div>
+        <h3>Recuperação do valor</h3>
+        <p>Você recebe o retroativo pago a mais e passa a pagar a mensalidade correta daqui pra frente.</p>
+      </div>
+    </div>
+
+    <div class="fw-loop">↻ O ciclo se repete: seu contrato fica monitorado contra novos reajustes abusivos.</div>
+  </div>
+</section>
+
+
+<!-- ③ CTA WHATSAPP -->
+<section class="bg-black">
+  <div class="wrap">
+    <h2>Quer adiantar o processo?<br><span class="grad">Fale agora pelo WhatsApp</span></h2>
+    <p style="text-align:center">
+      Se preferir não esperar o retorno, entre em contato diretamente com a equipe.
+      Tenha em mãos o valor da sua mensalidade atual e o nome da operadora.
+    </p>
+
+    <!-- Troque o número pelo WhatsApp real do escritório -->
+    <a class="btn btn-wa" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20fiz%20o%20cadastro%20para%20an%C3%A1lise%20do%20Falso%20Coletivo%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">
+      <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Falar com a equipe agora
+    </a>
+    <span class="muted">Atendimento de segunda a sexta, das 9h às 18h</span>
+  </div>
+</section>
+
+
+<!-- ④ DEPOIMENTOS -->
+<section class="bg-grad">
+  <div class="wrap">
+    <span class="eyebrow">Quem já passou por isso</span>
+    <h2>O que dizem os <span class="grad">clientes</span></h2>
+
+    <div class="row">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Eu pagava R$3.800 e achava que era o preço normal. Depois da análise descobri que havia base para ação. Em 40 dias já tinha a tutela concedida e a mensalidade caiu para R$2.400."</blockquote>
+        <div class="t-author">
+          <div class="t-avatar">MR</div>
+          <div>
+            <div class="t-name">Marcos R.</div>
+            <div class="t-role">Empresário · São Paulo/SP</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Meu plano dobrou de preço em 3 anos. O Wagner identificou o falso coletivo, entrou com a ação e conseguiu a devolução de mais de R$18 mil de retroativo."</blockquote>
+        <div class="t-author">
+          <div class="t-avatar">CF</div>
+          <div>
+            <div class="t-name">Carla F.</div>
+            <div class="t-role">Médica · Belo Horizonte/MG</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Desconfiava que algo estava errado mas não sabia o que fazer. A análise foi rápida, tudo pelo WhatsApp, e em poucos meses o problema foi resolvido sem precisar cancelar o plano."</blockquote>
+        <div class="t-author">
+          <div class="t-avatar">RT</div>
+          <div>
+            <div class="t-name">Ricardo T.</div>
+            <div class="t-role">Engenheiro · Curitiba/PR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ⑤ URGÊNCIA / LEMBRETE -->
+<section class="bg-dark">
+  <div class="wrap">
+    <div class="urgency">
+      <p style="font-size:18px;font-weight:700;color:#FFB700;margin-bottom:10px">⏳ Lembre-se: o prazo é de 3 anos retroativos</p>
+      <p>Cada mês que passa sem agir é uma parcela a menos que pode ser recuperada. O relógio corre desde a data de cada reajuste abusivo. A análise é gratuita — o custo de não agir é que é real.</p>
+    </div>
+
+    <a class="btn" href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20fiz%20o%20cadastro%20para%20an%C3%A1lise%20do%20Falso%20Coletivo%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">
+      Quero falar com a equipe agora
+    </a>
+  </div>
+</section>
+
+
+<!-- ⑥ FOOTER -->
+<section class="bg-black" style="padding:36px 20px">
+  <div class="wrap" style="gap:8px">
+    <span style="color:#9AA0AB;font-size:14px">Wagner António · Advocacia especializada em Direito do Consumidor na Saúde</span>
+    <span style="color:#5E646F;font-size:12px">© 2026 — Todos os direitos reservados. Conteúdo informativo; não constitui promessa de resultado.</span>
+  </div>
+</section>
+
+</body>
+</html>
