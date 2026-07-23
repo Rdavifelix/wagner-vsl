@@ -161,6 +161,35 @@ src="https://www.facebook.com/tr?id=1045407667990574&ev=PageView&noscript=1"
 
     /* Ícone WA */
     .wa-icon{width:22px;height:22px;fill:#fff}
+
+    /* Flywheel */
+    .flywheel{display:flex;flex-wrap:wrap;gap:0;width:100%;max-width:900px;justify-content:center;align-items:center}
+    .fw-card{
+      flex:1 1 190px;max-width:210px;
+      border:1px solid #2A2A2A;background:linear-gradient(160deg,#12100A,#0C0C0C);
+      border-radius:15px;padding:24px 18px;text-align:center;
+      display:flex;flex-direction:column;align-items:center;gap:10px;
+    }
+    .fw-num{
+      width:38px;height:38px;border-radius:50%;
+      background:linear-gradient(234deg,var(--gA),var(--gB));
+      font-weight:800;font-size:16px;color:#fff;
+      display:flex;align-items:center;justify-content:center;
+    }
+    .fw-icon{font-size:26px}
+    .fw-card h3{font-size:15px;color:#fff}
+    .fw-card p{font-size:13px;color:#9AA0AB;max-width:none;margin:0}
+    .fw-arrow{
+      flex:0 0 auto;color:var(--gA);font-size:22px;font-weight:700;
+      padding:0 6px;
+    }
+    @media(max-width:760px){
+      .flywheel{flex-direction:column}
+      .fw-arrow{transform:rotate(90deg)}
+    }
+    .fw-loop{
+      margin-top:10px;color:#8C93A1;font-size:13px;display:flex;align-items:center;gap:8px;
+    }
   </style>
 </head>
 <body>
@@ -171,31 +200,14 @@ src="https://www.facebook.com/tr?id=1045407667990574&ev=PageView&noscript=1"
     <div class="confirm-badge"><span class="dot"></span> Cadastro recebido com sucesso</div>
 
     <h1>
-      Sua análise foi <span class="grad">confirmada!</span><br>
-      Agora assista ao vídeo abaixo.
+      Cadastro <span class="grad">confirmado!</span><br>
+      Sua análise gratuita já está sendo preparada.
     </h1>
 
     <p style="font-size:17px;color:#D6D9DF;text-align:center">
-      Antes de entrar em contato com a nossa equipe, assista ao vídeo completo.
-      Ele vai te explicar exatamente como funciona o processo e o que esperar nos próximos passos.
+      Em breve nossa equipe entra em contato para dar início ao Raio-X do seu contrato.
+      Enquanto isso, veja como funciona o nosso método e o que outros clientes já conquistaram.
     </p>
-
-    <!-- VÍDEO — troque o src pelo link do YouTube/Vimeo do Wagner -->
-    <div class="video-wrap" style="align-self:center">
-      <!-- PLACEHOLDER: remova o bloco abaixo e descomente o iframe com o link real -->
-      <div class="play-icon">▶</div>
-      <span style="font-size:13px;color:#5E646F">Insira o link do vídeo aqui</span>
-
-      <!--
-      <iframe
-        src="https://www.youtube.com/embed/SEU_VIDEO_ID?autoplay=0&rel=0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-      -->
-    </div>
-
-    <span class="muted">⚠️ Assista até o final — as informações mais importantes estão nos últimos minutos.</span>
   </div>
 </section>
 
@@ -210,8 +222,8 @@ src="https://www.facebook.com/tr?id=1045407667990574&ev=PageView&noscript=1"
       <div class="step">
         <div class="step-num">1</div>
         <div class="step-body">
-          <h3>Você assistiu ao vídeo</h3>
-          <p>As informações do vídeo são essenciais para entender o seu direito. Já feito! ✓</p>
+          <h3>Você fez o seu cadastro</h3>
+          <p>Seus dados já estão com a nossa equipe, prontos para dar início à análise. Já feito! ✓</p>
         </div>
       </div>
       <div class="step">
@@ -236,6 +248,50 @@ src="https://www.facebook.com/tr?id=1045407667990574&ev=PageView&noscript=1"
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- ②.5 MÉTODO — FLYWHEEL -->
+<section class="bg-black">
+  <div class="wrap">
+    <span class="eyebrow">Nossa metodologia</span>
+    <h2>O método que já <span class="grad">recuperou milhões</span> em mensalidades abusivas</h2>
+    <p style="text-align:center">
+      Não é sorte, é processo. Todo caso passa pelas mesmas quatro etapas antes de virar dinheiro de volta no seu bolso.
+    </p>
+
+    <div class="flywheel">
+      <div class="fw-card">
+        <div class="fw-num">1</div>
+        <div class="fw-icon">🔍</div>
+        <h3>Diagnóstico do contrato</h3>
+        <p>Analisamos seu plano e identificamos sinais de falso coletivo e reajustes fora do teto legal.</p>
+      </div>
+      <div class="fw-arrow">→</div>
+      <div class="fw-card">
+        <div class="fw-num">2</div>
+        <div class="fw-icon">📑</div>
+        <h3>Comprovação jurídica</h3>
+        <p>Reunimos provas técnicas e documentais que sustentam a irregularidade perante a operadora.</p>
+      </div>
+      <div class="fw-arrow">→</div>
+      <div class="fw-card">
+        <div class="fw-num">3</div>
+        <div class="fw-icon">⚖️</div>
+        <h3>Ação de revisão</h3>
+        <p>Entramos com a medida judicial para reverter o reajuste, sem que você precise cancelar o plano.</p>
+      </div>
+      <div class="fw-arrow">→</div>
+      <div class="fw-card">
+        <div class="fw-num">4</div>
+        <div class="fw-icon">💰</div>
+        <h3>Recuperação do valor</h3>
+        <p>Você recebe o retroativo pago a mais e passa a pagar a mensalidade correta daqui pra frente.</p>
+      </div>
+    </div>
+
+    <div class="fw-loop">↻ O ciclo se repete: seu contrato fica monitorado contra novos reajustes abusivos.</div>
   </div>
 </section>
 
