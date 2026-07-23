@@ -18,6 +18,34 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1045407667990574&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
+<!-- Lead: Pixel (browser) + Conversions API (server), com mesmo event_id para deduplicação -->
+<script>
+(function(){
+  function getCookie(name){
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : undefined;
+  }
+  var eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+  var fbp = getCookie('_fbp');
+  var fbc = getCookie('_fbc');
+
+  if (window.fbq) {
+    fbq('track', 'Lead', {}, { eventID: eventId });
+  }
+
+  fetch('https://wagner-vsl.vercel.app/api/lead-capi', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      event_id: eventId,
+      url: window.location.href,
+      fbp: fbp,
+      fbc: fbc
+    })
+  }).catch(function(){});
+})();
+</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Análise Confirmada · Wagner António · Falso Coletivo</title>
